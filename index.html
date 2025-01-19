@@ -5,34 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home  temukan rumah impian anda aurelia residence</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="css/style.css" rel="stylesheet" />
+
+<!--Google Fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!--Google Fonts-->
+
 </head>
 <body>
 
 <!--nav menu-->
- <div class="navMenu">
+<div class="navMenu">
     <div class="container navMenuWrap">
-    <div class="listMenu">
-        <div class="menuItem"><a href="about.html">Tentang kami</a></div>
-        <div class="menuItem"><a href="project.html">projek kami</a></div>
-        <div class="menuItem"><a href="price.html">Harga rumah</a></div>
-        <div class="menuItem"><a href="gallery.html">Galeri foto</a></div>
+        <div class="listMenu">
+            <div class="menuItem"><a href="about.html">Tentang kami</a></div>
+            <div class="menuItem"><a href="project.html">projek kami</a></div>
+            <div class="menuItem"><a href="price.html">Harga rumah</a></div>
+            <div class="menuItem"><a href="gallery.html">Galeri foto</a></div>
+        </div>
+
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.png" alt=""></a>
+        </div>
+
+        <div class="buttonRegister">
+            <button type="button" class="btn btn-success btn-sm"><i class="bi bi-whatsapp"></i> chat with us</button>
+            <!--<input type="button" value="REGISTER"/>-->
+        </div>
     </div>
-
-
-
-    <div class="logo">
-        <a href="index.html"><img src="image/logo.png" alt=""></a>
-    </div>
-
-
-
-    <div class="buttonRegister">
-         <button type="button" class="btn btn-success btn-sm"> chat with us</button>
-         <!--<input type="button" value="REGISTER"/>-->
-    </div>
- </div>
-
  </div>
  <!--end nav menu-->
 
@@ -41,19 +44,32 @@
  <!--hero section-->
 <div class="heroSection">
     <div class="container">
+        <div class="modal fade" id="videoPopup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/H3NI4tyJfbI?si=WfAeNbljj0buafnK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
 
         <div class="bgLayer"></div>
 
         <div class="row align-items-center heroHeight">
             <div class="col-lg-6">
                 <div class="heroLeft">
-                    <h1 class="text-warning"> Temukan Rumah Impian Anda di Aurelia Residence 2</h1>
+                    <h1 class="text-warning poppins-thin"> Temukan Rumah Impian Anda di Aurelia Residence 2</h1>
                     <p class="text-white">
-                        aurelia Residence 2 menawarkan rumah dengan konsep mezanine yang modern dan nyaman. Nikmati cicilan terjangkau mulai harga mulai 500 jutaan dari 3 juta per bulan di lokasi yang strategis.
+                        aurelia Residence 2 menawarkan rumah dengan konsep mezanine yang modern dan nyaman. Nikmati cicilan terjangkau mulai harga mulai <span class="poppins-extrabold text-warning">500 jutaan</span> dari 3 juta per bulan di lokasi yang strategis.
                     </p>
                     <div class="btnHero">
                         <button class="btn btn-success">Pelajari</button>
-                        <button class="btn btn-outline-light">Daftar</button>
+                        <button data-bs-toggle="modal" data-bs-target="#videoPopup" class="btn btn-outline-light">Tonton video</button>
                     </div>
                 </div>
             </div>
@@ -70,9 +86,9 @@
                     <label>Your Email</label>
                     <input type="email" class="form-control" />
                     <br><br>
-                    <div class="d-grid"></div>
-                    <button type="button" class="btn btn-success">submit</button>
-                    
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-success"> submit <i class="bi bi-arrow-right-circle"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,7 +109,7 @@
  <div class="sectionAdvantage">
     <div class="container">
         <div class="row align-items-center heroHeight">
-            <div class="col-6">
+            <div class="col-lg-6">
                 <div class="advLeft">
                     <h2 class="text text-success">Keunggulan Rumah Mezanine: Desain Modern dan Fungsional untuk Keluarga Anda</h1>
                     <br>
@@ -102,11 +118,13 @@
                     <br><br>
                     <div class="advList">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6">
+                                <i class="bi bi-aspect-ratio text-warning"></i>
                                 <h4>Ruang Terbuka</h4>
                                 <p>desain mezanine memberikan sirrkulasi udara yang baik dan pencahayaan alami</p>
                             </div>
-                            <div class="col-6">
+                            <div class="col-lg-6">
+                                <i class="bi bi-box-arrow-up-right text-warning"></i>
                                 <h4>Fleksibilitas Ruang</h4>
                                 <p>Ruang yang dapat disesuaikan untuk berbagai kebutuhan keluarga Anda</p>
                             </div>     
@@ -114,17 +132,103 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6">
                 <div class="advRight">
-                    <img src="image/image-section-bg2.jpg" alt="">
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/H3NI4tyJfbI?si=WfAeNbljj0buafnK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+                       
+
+                    
         
                 </div>
             </div>
         </div>
+    </div>
+</div>
         
+ 
+
+<!--section keunggulan-->
 
 
 
+<div class="sectionAdvantage bg-orange">
+    <div class="container">
+        <div class="row align-items-center heroHeight">
+            <div class="col-lg-6">
+                <div class="advRight">
+                    <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="BAGIAN DEPAN" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="BAGIAN HALAMAN"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="BAGIAN DALAM"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="image/hero-section-bg.jpg" class="d-block w-100" alt="BAGIAN DEPAN">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h5>First slide label</h5>
+                              <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="image/image-section-bg2.jpg" class="d-block w-100" alt="BAGIAN HALAMAN">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h5>Second slide label</h5>
+                              <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="image/placeholderImage.jpg" class="d-block w-100" alt="BAGIAN DALAM">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h5>Third slide label</h5>
+                              <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    
+
+                
+                </div>
+            </div>
+                         
+                
+            <div class="col-lg-6">
+                <div class="advLeft">
+                    <h2 class="text-white">nikmati kenyaman tinggal di aurelia residence 2 dengan cicilan terjangkau.</h2>
+                    <br>
+                    <p class="text-white">
+                            aurelia residence 2 menawarkan cicilan mulai 3 jutaan perbulan ,menjadikan pilihan ideal bagi keluarga .dengan desain mezanine
+                    </p>
+                    <br>
+                
+                    <div class="advList">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4 class="text-white">Terjangkau"</h4>
+                                <p class="text-white">cicilan mulai 3 jutaan perbulan</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <h4 class="text-white">Nyaman"</h4>
+                                <p class="text-white">desain mezanine lebih luas</p>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -132,6 +236,10 @@
 
 
 <!--Bootstrap JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>               
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!--customjs-->
+<script src="js/script.js">
+</script>
 </body>
 </html>
