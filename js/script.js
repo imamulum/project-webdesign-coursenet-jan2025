@@ -58,7 +58,7 @@ if(nilaiUjian >= 75){
 }
 
 
-if(nilaiUjian >=75 && nilaiAbsen >= 75)[{
+if(nilaiUjian >=75 && nilaiAbsen >= 75){
     console.log('LULUS SEMPURNA')
 }else if(nilaiUjian >= 75 && nilaiAbsen <= 75){
     console.log('LULUS BIASA')
@@ -75,16 +75,136 @@ console.log ('HASIL TERNERY OPERATOR :', hasilUjian)
 
 
 //ARRAY
-constcas = [
-    'Cayla'
-    'AGya'
-    'Avanza'
-    'Brio'
-    'BRV'
-    'Mobilio'
-    'CRV'
-    'BYD'
-    'Tesla'
+const cars = [
+    'Cayla',
+    'AGya',
+    'Avanza',
+    'Brio',
+    'BRV',
+    'Mobilio',
+    'CRV',
+    'BYD',
+    'Tesla',
+]
+
+const motorBike = [
+    'nmax',
+    'adv',
+    'pcx',
+    'aerox',
+    'vario',
+    'ducati',
 ]
 
 console.log("Car Brand: " , cars)
+console.table(cars)
+console.log('Data Index ke-4:', cars[4])
+console.log('Jumlah Data: ', cars. length)
+
+//ARRAY METHODS
+cars.push('BMW')
+console.table(cars)
+
+const newData = cars.toString() //toString
+console.log(newData)
+
+const newDataJoin = cars.join("-")//join
+console.log(newDataJoin)
+
+
+const newDataShift = cars.shift()//shift
+console.log(newDataShift)
+console.log(cars)
+
+delete cars[3]//delete
+console.log(cars)
+console.table(cars)
+
+const concatData = cars.concat(motorBike)//concat
+console.table(concatData)
+
+
+//LOOPING
+for(i = 0; i < cars.length; i++ ){
+    console.log('HASIL LOOPING', cars[i])
+}
+
+
+const food = [
+    {
+        id : 1,
+        rasa: 'Manis',
+        warna: 'Merah',
+        bentuk: 'Bulat'
+    },
+    {
+        id : 2,
+        rasa: 'Pahit',
+        warna: 'Kuning',
+        bentuk: 'Kotak'
+    },
+    {
+        id : 3,
+        rasa: 'Asam',
+        warna: 'Hijau',
+        bentuk: 'Bulat'
+    }
+]
+
+
+food.forEach(foods => {
+    for(let value in foods){
+        console.log(`${foods[value]}`)
+    }
+})
+
+
+//JQUERY SCRIPT
+$(document).ready(function()
+
+//SHOW HIDE
+{
+    $('#textReadMore').hide()
+
+    $('#showText').click (function(){
+        $('#textReadMore').show()
+
+    })
+    $('#hideText').click(function(){
+      $('#textReadMore').hide()
+
+    })
+
+    //TOOGLE
+    $('#TextService').hide()
+    $('#ShowService').click(function(){
+        $('#TextService').toggle()
+        if($(this).text()=='Hide Services'){
+            $(this).text ('Show More Services →')
+        }else;{
+            (this).text('Hide Services')
+        }
+    })
+    
+
+})
+
+//SPLIDEJS
+var splide = new Splide( '.splide', {
+    perPage: 2,
+    gap    : '2rem',
+    breakpoints: {
+      640: {
+        perPage: 2,
+        gap    : '.7rem',
+        height : '6rem',
+      },
+      480: {
+        perPage: 1,
+        gap    : '.7rem',
+        height : '6rem',
+      },
+    },
+  } );
+  
+  splide.mount();
